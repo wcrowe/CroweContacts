@@ -1,0 +1,69 @@
+﻿@page
+@model CroweContacts.Pages.Contact.EditModel
+
+<h4>Edit Contact</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ContactVm.ContactId" />
+            <div class="form-group">
+                <label asp-for="ContactVm.FirstName" class="control-label"></label>
+                <input asp-for="ContactVm.FirstName" class="form-control" />
+                <span asp-validation-for="ContactVm.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactVm.LastName" class="control-label"></label>
+                <input asp-for="ContactVm.LastName" class="form-control" />
+                <span asp-validation-for="ContactVm.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactVm.SSN" class="control-label"></label>
+                <input asp-for="ContactVm.SSN" class="form-control" />
+                <span asp-validation-for="ContactVm.SSN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactVm.DOB" class="control-label"></label>
+                <input asp-for="ContactVm.DOB" class="form-control" />
+                <span asp-validation-for="ContactVm.DOB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactVm.Email" class="control-label"></label>
+                <input asp-for="ContactVm.Email" class="form-control" />
+                <span asp-validation-for="ContactVm.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactVm.Address" class="control-label"></label>
+                <input asp-for="ContactVm.Address" class="form-control" />
+                <span asp-validation-for="ContactVm.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactVm.City" class="control-label"></label>
+                <input asp-for="ContactVm.City" class="form-control" />
+                <span asp-validation-for="ContactVm.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactVm.State" class="control-label"></label>
+                <input asp-for="ContactVm.State" class="form-control" />
+                <span asp-validation-for="ContactVm.State" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContactVm.PostalCode" class="control-label"></label>
+                <input asp-for="ContactVm.PostalCode" class="form-control" />
+                <span asp-validation-for="ContactVm.PostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

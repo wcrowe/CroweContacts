@@ -1,0 +1,48 @@
+﻿@page
+@model CroweContacts.Pages.Phone.IndexModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneVm[0].Device)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneVm[0].Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneVm[0].Extension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneVm[0].ContactId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.PhoneVm) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Device)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Extension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactId)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.PhoneId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.PhoneId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.PhoneId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

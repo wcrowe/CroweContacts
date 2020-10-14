@@ -1,0 +1,44 @@
+﻿@page
+@using CroweContacts.Models.ContactVM
+@model CroweContacts.Pages.Phone.EditModel
+
+<h4>Edit Phone Number</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PhoneVm.PhoneId" />
+            <div class="form-group">
+                <label asp-for="PhoneVm.Device" class="control-label"></label>
+                <select class="form-control" asp-for="PhoneVm.Device" asp-items="@CroweContacts.Utility.PhoneTypes.GetPhoneTypes()">
+                    <option value=""> - Pick a device - </option>
+                </select>
+                <span asp-validation-for="PhoneVm.Device" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneVm.Number" class="control-label"></label>
+                <input asp-for="PhoneVm.Number" class="form-control" />
+                <span asp-validation-for="PhoneVm.Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneVm.Extension" class="control-label"></label>
+                <input asp-for="PhoneVm.Extension" class="form-control" />
+                <span asp-validation-for="PhoneVm.Extension" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="PhoneVm.ContactId" value="@Model.PhoneVm.ContactId" />
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div>
+    <a href="@Url.Page("/Contact/Details", new {id = Model.PhoneVm.ContactId})">Back To Contact</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
