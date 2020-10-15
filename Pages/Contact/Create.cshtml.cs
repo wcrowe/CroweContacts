@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CroweContacts.Models.ContactVM;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using CroweContacts.Data;
-using CroweContacts.Models.ContactVM;
+using System.Threading.Tasks;
 
 namespace CroweContacts.Pages.Contact
 {

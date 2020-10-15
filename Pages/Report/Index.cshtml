@@ -1,0 +1,49 @@
+﻿@page
+@model CroweContacts.Pages.Report.IndexModel
+
+<h4>Reports</h4>
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form method="post">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Report
+                        </th>
+                        <th>
+                            Start Date
+                        </th>
+                        <th>
+                            End Date
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <span class="align-items-lg-start">Contacts With Phone Number Count</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input id="Rpt1StartDate" name="Rpt1StartDate" type="date" class="form-control" value='@DateTime.Now.AddMonths(-1).ToString("yyyy-MM-dd")' min="2000-01-01" max="2030-12-31" data-inputmask-alias="datetime" data-inputmask-inputformat="mm/dd/yyyy" inputmode="numeric">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input id="Rpt1EndDate" name="Rpt1EndDate" type="date" class="form-control" value='@DateTime.Now.ToString("yyyy-MM-dd")' min="2000-01-01" max="2030-12-31">
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn-outline-secondary">Run</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
