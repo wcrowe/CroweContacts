@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CroweContacts.Data.Migrations
 {
-    [DbContext(typeof(CroweContactsContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20201014110225_AddCreateDate")]
     partial class AddCreateDate
     {

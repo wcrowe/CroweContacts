@@ -12,9 +12,9 @@ namespace CroweContacts.Pages.Contact
 {
     public class DetailsModel : PageModel
     {
-        private readonly CroweContacts.Data.CroweContactsContext _context;
+        private readonly CroweContacts.Data.ApplicationDbContext _context;
 
-        public DetailsModel(CroweContacts.Data.CroweContactsContext context)
+        public DetailsModel(CroweContacts.Data.ApplicationDbContext context)
         {
             _context = context;
         }

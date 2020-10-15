@@ -8,8 +8,8 @@ namespace CroweContacts.Pages.Phone
 {
     public class DetailsModel : PageModel
     {
-        private readonly CroweContacts.Data.CroweContactsContext _context;
-        public DetailsModel(CroweContacts.Data.CroweContactsContext context)
+        private readonly CroweContacts.Data.ApplicationDbContext _context;
+        public DetailsModel(CroweContacts.Data.ApplicationDbContext context)
         {
             _context = context;
         }

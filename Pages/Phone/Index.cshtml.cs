@@ -12,9 +12,9 @@ namespace CroweContacts.Pages.Phone
 {
     public class IndexModel : PageModel
     {
-        private readonly CroweContacts.Data.CroweContactsContext _context;
+        private readonly CroweContacts.Data.ApplicationDbContext _context;
 
-        public IndexModel(CroweContacts.Data.CroweContactsContext context)
+        public IndexModel(CroweContacts.Data.ApplicationDbContext context)
         {
             _context = context;
         }

@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CroweContacts.Data
 {
-    public class CroweContactsContext : IdentityDbContext // DbContext
+    public class ApplicationDbContext : IdentityDbContext // DbContext
     {
-        public CroweContactsContext (DbContextOptions<CroweContactsContext> options)
+        public ApplicationDbContext (DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }

@@ -31,19 +31,19 @@ namespace CroweContacts
                 // requires using Microsoft.AspNetCore.Http;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddDbContext<CroweContactsContext>(options =>
+            services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<CroweContactsContext>();
+                .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddRazorPages(options =>
             {
                 options.Conventions.AuthorizeFolder("/Contact");
                 options.Conventions.AuthorizeFolder("/Phone");
 
             });
-            services.AddDbContext<CroweContactsContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("CroweContactsContext")));
+            services.AddDbContext<ApplicationDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
             services.AddScoped<IContactService, ContactService>();
         }
 

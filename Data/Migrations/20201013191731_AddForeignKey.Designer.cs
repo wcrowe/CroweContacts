@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CroweContacts.Data.Migrations
 {
-    [DbContext(typeof(CroweContactsContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20201013191731_AddForeignKey")]
     partial class AddForeignKey
     {

@@ -7,9 +7,9 @@ namespace CroweContacts.Pages.Contact
 {
     public class CreateModel : PageModel
     {
-        private readonly CroweContacts.Data.CroweContactsContext _context;
+        private readonly CroweContacts.Data.ApplicationDbContext _context;
 
-        public CreateModel(CroweContacts.Data.CroweContactsContext context)
+        public CreateModel(CroweContacts.Data.ApplicationDbContext context)
         {
             _context = context;
         }

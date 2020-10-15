@@ -13,9 +13,9 @@ namespace CroweContacts.Pages.Phone
 {
     public class EditModel : PageModel
     {
-        private readonly CroweContacts.Data.CroweContactsContext _context;
+        private readonly CroweContacts.Data.ApplicationDbContext _context;
 
-        public EditModel(CroweContacts.Data.CroweContactsContext context)
+        public EditModel(CroweContacts.Data.ApplicationDbContext context)
         {
             _context = context;
         }

@@ -8,9 +8,9 @@ namespace CroweContacts.Pages.Phone
 {
     public class DeleteModel : PageModel
     {
-        private readonly CroweContacts.Data.CroweContactsContext _context;
+        private readonly CroweContacts.Data.ApplicationDbContext _context;
 
-        public DeleteModel(CroweContacts.Data.CroweContactsContext context)
+        public DeleteModel(CroweContacts.Data.ApplicationDbContext context)
         {
             _context = context;
         }

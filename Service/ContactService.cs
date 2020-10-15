@@ -10,8 +10,8 @@ namespace CroweContacts.Service
 {
     public class ContactService : IContactService
     {
-        private readonly CroweContacts.Data.CroweContactsContext _context;
-        public ContactService(CroweContactsContext context) => this._context = context;
+        private readonly CroweContacts.Data.ApplicationDbContext _context;
+        public ContactService(ApplicationDbContext context) => this._context = context;
 
         public async Task<List<ContactVm>> GetContactListAsync() => await _context.ContactVm.ToListAsync();
         public async Task<ContactVm> GetContactByIdAsync(int? id) => await _context.ContactVm.FirstOrDefaultAsync(m => m.ContactId == id);
